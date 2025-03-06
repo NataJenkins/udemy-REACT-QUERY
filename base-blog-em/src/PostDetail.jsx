@@ -6,7 +6,7 @@ export function PostDetail({ post }) {
     // replace with useQuery
 
     const { data, isError, isLoading, error } = useQuery({
-        queryKey: ["comments"],
+        queryKey: ["comments", post.id],
         queryFn: () => fetchComments(post.id),
     });
 
