@@ -19,7 +19,7 @@ export function Posts() {
                 queryFn: () => fetchPosts(nextPage),
             });
         }
-    }, [currentPage]);
+    }, [currentPage, queryClient]);
 
     const { data, isError, error, isLoading } = useQuery({
         queryKey: ["posts", currentPage],
